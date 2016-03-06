@@ -39,7 +39,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-ty-w2l">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-ty-w2l">
                                 <rect key="frame" x="241" y="66" width="118" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-Kw-Bx7">
@@ -66,10 +66,14 @@
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="Apg-3a-32J"/>
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="leading" secondItem="uMX-Kw-Bx7" secondAttribute="leading" id="BWW-cW-pHL"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="Bf8-iD-ljD"/>
+                            <constraint firstItem="RmL-ty-w2l" firstAttribute="width" secondItem="uDT-DE-SL8" secondAttribute="width" id="JsD-yG-zuV"/>
+                            <constraint firstItem="RmL-ty-w2l" firstAttribute="centerX" secondItem="uDT-DE-SL8" secondAttribute="centerX" id="emD-hB-ITB"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="width" secondItem="gMR-O7-n3P" secondAttribute="width" id="ey0-OD-4Eh"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="hyE-Xl-OXz"/>
+                            <constraint firstItem="RmL-ty-w2l" firstAttribute="top" secondItem="uDT-DE-SL8" secondAttribute="bottom" constant="8" id="juK-2I-aoR"/>
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="top" secondItem="RmL-ty-w2l" secondAttribute="bottom" constant="21" id="lGd-eO-hdk"/>
                             <constraint firstItem="RmL-ty-w2l" firstAttribute="centerX" secondItem="uDT-DE-SL8" secondAttribute="centerX" id="lhJ-Q9-mew"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="top" secondItem="RmL-ty-w2l" secondAttribute="bottom" constant="21" id="nu2-Bw-z4Y"/>
                             <constraint firstItem="RmL-ty-w2l" firstAttribute="top" secondItem="uDT-DE-SL8" secondAttribute="bottom" constant="8" id="qTQ-yP-fbh"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="rwj-ES-Jse"/>
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="centerX" secondItem="RmL-ty-w2l" secondAttribute="centerX" id="u4L-7M-b9c"/>
@@ -79,13 +83,19 @@
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="leading" secondItem="uMX-Kw-Bx7" secondAttribute="leading" id="wfh-rx-ZV4"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="width" secondItem="gMR-O7-n3P" secondAttribute="width" id="xzd-So-LNf"/>
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="trailing" secondItem="uMX-Kw-Bx7" secondAttribute="trailing" id="y9L-dh-pLE"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="centerX" secondItem="RmL-ty-w2l" secondAttribute="centerX" id="yJW-8G-Sq8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="lhJ-Q9-mew"/>
+                                <exclude reference="qTQ-yP-fbh"/>
+                                <exclude reference="v9q-nT-Q0J"/>
+                                <exclude reference="1Di-wP-FlY"/>
                                 <exclude reference="28p-iF-gyr"/>
                                 <exclude reference="ASl-eT-sQ7"/>
                                 <exclude reference="BWW-cW-pHL"/>
                                 <exclude reference="lGd-eO-hdk"/>
+                                <exclude reference="u4L-7M-b9c"/>
                                 <exclude reference="wfh-rx-ZV4"/>
                                 <exclude reference="y9L-dh-pLE"/>
                                 <exclude reference="2UM-Vl-4nq"/>
