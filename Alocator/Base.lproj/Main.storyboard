@@ -18,43 +18,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-O7-n3P">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-O7-n3P">
                                 <rect key="frame" x="230" y="117" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GOK-Ys-9gf"/>
+                                    <constraint firstAttribute="height" constant="30" id="U9B-u7-L3o"/>
+                                    <constraint firstAttribute="width" constant="140" id="ZWb-aD-ziL"/>
+                                    <constraint firstAttribute="width" constant="140" id="dHE-4J-w7l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.31874903354791151" blue="0.073024939643906994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GOK-Ys-9gf"/>
+                                        <exclude reference="U9B-u7-L3o"/>
+                                        <exclude reference="ZWb-aD-ziL"/>
+                                        <exclude reference="dHE-4J-w7l"/>
+                                    </mask>
+                                </variation>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-ty-w2l">
+                                <rect key="frame" x="241" y="66" width="118" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-Kw-Bx7">
+                                <rect key="frame" x="230" y="168" width="140" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uDT-DE-SL8">
                                 <rect key="frame" x="20" y="28" width="560" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-ty-w2l">
-                                <rect key="frame" x="241" y="66" width="118" height="31"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMX-Kw-Bx7">
-                                <rect key="frame" x="279" y="168" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="top" secondItem="RmL-ty-w2l" secondAttribute="bottom" constant="21" id="1Di-wP-FlY"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="centerX" secondItem="RmL-ty-w2l" secondAttribute="centerX" id="28p-iF-gyr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMX-Kw-Bx7" secondAttribute="trailing" constant="15" id="2UM-Vl-4nq"/>
+                            <constraint firstItem="uMX-Kw-Bx7" firstAttribute="centerX" secondItem="gMR-O7-n3P" secondAttribute="centerX" id="9Ki-8X-UnH"/>
                             <constraint firstItem="uDT-DE-SL8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9ol-SF-9mJ"/>
-                            <constraint firstItem="gMR-O7-n3P" firstAttribute="centerY" secondItem="RmL-ty-w2l" secondAttribute="centerY" id="ASl-eT-sQ7"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="centerY" secondItem="RmL-ty-w2l" secondAttribute="centerY" constant="51" id="ASl-eT-sQ7"/>
+                            <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="Apg-3a-32J"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="leading" secondItem="uMX-Kw-Bx7" secondAttribute="leading" id="BWW-cW-pHL"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="Bf8-iD-ljD"/>
+                            <constraint firstItem="uMX-Kw-Bx7" firstAttribute="width" secondItem="gMR-O7-n3P" secondAttribute="width" id="ey0-OD-4Eh"/>
                             <constraint firstItem="uMX-Kw-Bx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="hyE-Xl-OXz"/>
                             <constraint firstItem="gMR-O7-n3P" firstAttribute="top" secondItem="RmL-ty-w2l" secondAttribute="bottom" constant="21" id="lGd-eO-hdk"/>
                             <constraint firstItem="RmL-ty-w2l" firstAttribute="centerX" secondItem="uDT-DE-SL8" secondAttribute="centerX" id="lhJ-Q9-mew"/>
                             <constraint firstItem="RmL-ty-w2l" firstAttribute="top" secondItem="uDT-DE-SL8" secondAttribute="bottom" constant="8" id="qTQ-yP-fbh"/>
+                            <constraint firstItem="uMX-Kw-Bx7" firstAttribute="top" secondItem="gMR-O7-n3P" secondAttribute="bottom" constant="21" id="rwj-ES-Jse"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="centerX" secondItem="RmL-ty-w2l" secondAttribute="centerX" id="u4L-7M-b9c"/>
                             <constraint firstAttribute="leadingMargin" secondItem="uDT-DE-SL8" secondAttribute="leading" id="ubg-lE-Fx8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uDT-DE-SL8" secondAttribute="trailing" id="v6g-xW-ABh"/>
                             <constraint firstItem="RmL-ty-w2l" firstAttribute="width" secondItem="uDT-DE-SL8" secondAttribute="width" constant="-446" id="v9q-nT-Q0J"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="leading" secondItem="uMX-Kw-Bx7" secondAttribute="leading" id="wfh-rx-ZV4"/>
+                            <constraint firstItem="uMX-Kw-Bx7" firstAttribute="width" secondItem="gMR-O7-n3P" secondAttribute="width" id="xzd-So-LNf"/>
+                            <constraint firstItem="gMR-O7-n3P" firstAttribute="trailing" secondItem="uMX-Kw-Bx7" secondAttribute="trailing" id="y9L-dh-pLE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="28p-iF-gyr"/>
+                                <exclude reference="ASl-eT-sQ7"/>
+                                <exclude reference="BWW-cW-pHL"/>
+                                <exclude reference="lGd-eO-hdk"/>
+                                <exclude reference="wfh-rx-ZV4"/>
+                                <exclude reference="y9L-dh-pLE"/>
+                                <exclude reference="2UM-Vl-4nq"/>
+                                <exclude reference="Apg-3a-32J"/>
+                                <exclude reference="Bf8-iD-ljD"/>
+                                <exclude reference="ey0-OD-4Eh"/>
+                                <exclude reference="hyE-Xl-OXz"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="UGq-zV-2z8" appends="YES" id="JvQ-qe-GBW"/>
                         </connections>
