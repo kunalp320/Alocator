@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func tapGestureDidFire(sender: UITapGestureRecognizer) {
+        self.beerPercentTextField.resignFirstResponder()
+    }
+    
     @IBAction func sliderValueDidChange(sender: UISlider) {
         self.beerPercentTextField.resignFirstResponder()
     }
