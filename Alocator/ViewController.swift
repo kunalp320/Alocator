@@ -40,11 +40,37 @@ class ViewController: UIViewController {
         self.beerPercentTextField.resignFirstResponder()
         
         let numberOfBeers : Float = self.numberOfBeers.value
-        let ouncesInOneBeerGlass : Int = 12
+        let ouncesInOneBeerGlass : Float = 12
         
-        let alcoholPercentageOfBeer : Double = Double(self.beerPercentTextField!)! / 100
-        let ouncesOfAlcoholPerBeer : Double = ouncesInOneBeerGlass * alcoholPercentageOfBeer
-    
+        let alcoholPercentageOfBeer : Float = Float(self.beerPercentTextField.text!)! / 100
+        let ouncesOfAlcoholPerBeer : Float = ouncesInOneBeerGlass * alcoholPercentageOfBeer
+        let ouncesOfTotalAlcohol : Float = ouncesOfAlcoholPerBeer * numberOfBeers
+        
+        
+        let ouncesOfWineInOneGlass : Float = 5
+        let alcoholPercentOfWine : Float = 0.13
+        let ouncesOfAlcoholPerWineGlass : Float = ouncesOfWineInOneGlass * alcoholPercentOfWine
+        let numberOfWineGlassesForEquivalentAlcoholAmount : Float = ouncesOfTotalAlcohol / ouncesOfAlcoholPerWineGlass
+        
+        
+        var beerString : String = ""
+        if numberOfBeers == 1 {
+            beerString = NSLocalizedString("beer", comment: "singular of beer")
+        } else {
+            beerString = NSLocalizedString("beers", comment: "plural of beer")
+        }
+        
+        var wineText : String = ""
+        if numberOfWineGlassesForEquivalentAlcoholAmount == 1 {
+            wineText = NSLocalizedString("glass", comment: "singular glass")
+        } else {
+            wineText = NSLocalizedString("glasses", comment: "plural glass")
+        }
+        
+        let beerPercent : Float = Float(self.beerPercentTextField.text!)!
+        let resultText : String = "\(numberOfBeers) \(beerString) (with \(beerPercent) alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine."
+        
+        self.resultLabel.text = resultText;
     }
     
     
