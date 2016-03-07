@@ -72,8 +72,9 @@ class ViewController: UIViewController {
         }
         
         let beerPercent : Float = Float(self.beerPercentTextField.text!)!
-        let resultText : String = "\(numberOfBeers) \(beerString) (with \(beerPercent) alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine."
+        let resultText : String = "\(numberOfBeers) \(beerString) (with \(beerPercent)% alcohol) contains as much alcohol as \(numberOfWineGlassesForEquivalentAlcoholAmount) \(wineText) of wine."
         
+        print(resultText)
         self.resultLabel.text = resultText;
     }
     

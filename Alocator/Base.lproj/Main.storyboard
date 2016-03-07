@@ -38,6 +38,10 @@
                                         <exclude reference="dHE-4J-w7l"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qGQ-Yi-vzB"/>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GnL-41-y8H"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-ty-w2l">
                                 <rect key="frame" x="241" y="66" width="118" height="31"/>
@@ -109,6 +113,11 @@
                             <outletCollection property="gestureRecognizers" destination="UGq-zV-2z8" appends="YES" id="JvQ-qe-GBW"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="beerPercentTextField" destination="uDT-DE-SL8" id="Uyx-HN-u7o"/>
+                        <outlet property="numberOfBeers" destination="RmL-ty-w2l" id="xQz-pS-hZI"/>
+                        <outlet property="resultLabel" destination="uMX-Kw-Bx7" id="3BR-2k-3QM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="UGq-zV-2z8">
