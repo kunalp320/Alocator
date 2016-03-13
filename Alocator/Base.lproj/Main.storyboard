@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KhU-fv-8Ka">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -125,7 +125,120 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="305" y="387"/>
+            <point key="canvasLocation" x="-211" y="201"/>
+        </scene>
+        <!--Whiskey View Controller-->
+        <scene sceneID="bKb-EQ-PEm">
+            <objects>
+                <viewController id="KhU-fv-8Ka" customClass="WhiskeyViewController" customModule="Alocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Bl-7o-tlS"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyh-98-68u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xG6-Gg-Z8y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQX-zG-BGh">
+                                <rect key="frame" x="230" y="117" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="FTE-A9-SEC"/>
+                                    <constraint firstAttribute="height" constant="30" id="LGP-AB-AyL"/>
+                                    <constraint firstAttribute="height" constant="30" id="cHG-i5-nN3"/>
+                                    <constraint firstAttribute="width" constant="140" id="xOb-W5-Vmc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="1" green="0.3187490335" blue="0.073024939639999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cHG-i5-nN3"/>
+                                        <exclude reference="LGP-AB-AyL"/>
+                                        <exclude reference="xOb-W5-Vmc"/>
+                                        <exclude reference="FTE-A9-SEC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="KhU-fv-8Ka" eventType="touchUpInside" id="2aN-tc-0HK"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-hU-GT6">
+                                <rect key="frame" x="241" y="66" width="118" height="31"/>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="% Alcohol Content per Beer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-pt-H4Q">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7x-xn-QNi">
+                                <rect key="frame" x="230" y="168" width="140" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="centerX" secondItem="HHk-hU-GT6" secondAttribute="centerX" id="5Tu-LK-vTD"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="leading" secondItem="xG6-Gg-Z8y" secondAttribute="leadingMargin" constant="15" id="9PL-Um-NWo"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="width" secondItem="X9g-pt-H4Q" secondAttribute="width" constant="-446" id="BDZ-Uw-WV5"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="top" secondItem="HHk-hU-GT6" secondAttribute="bottom" constant="21" id="C7g-C8-Z74"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="top" secondItem="uQX-zG-BGh" secondAttribute="bottom" constant="21" id="HX7-JH-Jdo"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="top" secondItem="X9g-pt-H4Q" secondAttribute="bottom" constant="8" id="Hnj-m4-Lfj"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="top" secondItem="uQX-zG-BGh" secondAttribute="bottom" constant="21" id="JFC-R7-H5g"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="width" secondItem="uQX-zG-BGh" secondAttribute="width" id="KIO-9B-Q8g"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="trailing" secondItem="z7x-xn-QNi" secondAttribute="trailing" id="KxX-yY-j0h"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="leading" secondItem="z7x-xn-QNi" secondAttribute="leading" id="Mse-EV-5XC"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="leading" secondItem="z7x-xn-QNi" secondAttribute="leading" id="NYU-IN-6qM"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="width" secondItem="X9g-pt-H4Q" secondAttribute="width" id="NyA-m9-fXL"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="centerX" secondItem="X9g-pt-H4Q" secondAttribute="centerX" id="OaX-Co-Eqt"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="centerY" secondItem="HHk-hU-GT6" secondAttribute="centerY" constant="51" id="Osz-Xu-LTt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="X9g-pt-H4Q" secondAttribute="leading" id="W8V-gS-fDt"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="centerX" secondItem="HHk-hU-GT6" secondAttribute="centerX" id="XrP-M9-VyK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X9g-pt-H4Q" secondAttribute="trailing" id="atW-yY-IgJ"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="top" secondItem="HHk-hU-GT6" secondAttribute="bottom" constant="21" id="cJg-lk-g5Z"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="top" secondItem="uQX-zG-BGh" secondAttribute="bottom" constant="21" id="cOO-Is-vri"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="centerX" secondItem="X9g-pt-H4Q" secondAttribute="centerX" id="cYf-Ee-ZXj"/>
+                            <constraint firstItem="HHk-hU-GT6" firstAttribute="top" secondItem="X9g-pt-H4Q" secondAttribute="bottom" constant="8" id="fNH-Z5-ciH"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="top" secondItem="HHk-hU-GT6" secondAttribute="bottom" constant="21" id="fV5-zB-Qaf"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="width" secondItem="uQX-zG-BGh" secondAttribute="width" id="jFw-IR-Hdh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z7x-xn-QNi" secondAttribute="trailing" constant="15" id="khC-0y-zxn"/>
+                            <constraint firstItem="uQX-zG-BGh" firstAttribute="centerX" secondItem="HHk-hU-GT6" secondAttribute="centerX" id="lOX-jo-PCY"/>
+                            <constraint firstItem="X9g-pt-H4Q" firstAttribute="top" secondItem="4Bl-7o-tlS" secondAttribute="bottom" constant="8" id="yFZ-jZ-EOa"/>
+                            <constraint firstItem="z7x-xn-QNi" firstAttribute="centerX" secondItem="uQX-zG-BGh" secondAttribute="centerX" id="yKo-98-idO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OaX-Co-Eqt"/>
+                                <exclude reference="fNH-Z5-ciH"/>
+                                <exclude reference="BDZ-Uw-WV5"/>
+                                <exclude reference="C7g-C8-Z74"/>
+                                <exclude reference="lOX-jo-PCY"/>
+                                <exclude reference="Osz-Xu-LTt"/>
+                                <exclude reference="Mse-EV-5XC"/>
+                                <exclude reference="cJg-lk-g5Z"/>
+                                <exclude reference="5Tu-LK-vTD"/>
+                                <exclude reference="NYU-IN-6qM"/>
+                                <exclude reference="KxX-yY-j0h"/>
+                                <exclude reference="khC-0y-zxn"/>
+                                <exclude reference="HX7-JH-Jdo"/>
+                                <exclude reference="cOO-Is-vri"/>
+                                <exclude reference="jFw-IR-Hdh"/>
+                                <exclude reference="9PL-Um-NWo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="beerPercentTextField" destination="X9g-pt-H4Q" id="83N-bx-YHL"/>
+                        <outlet property="numberOfBeers" destination="HHk-hU-GT6" id="u4H-Eg-2df"/>
+                        <outlet property="resultLabel" destination="z7x-xn-QNi" id="Og9-nI-WZX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NW-72-hEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-211" y="865"/>
         </scene>
     </scenes>
 </document>
