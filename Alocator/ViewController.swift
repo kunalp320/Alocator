@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var numberOfBeers: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +37,7 @@ class ViewController: UIViewController {
     
     @IBAction func sliderValueDidChange(sender: UISlider) {
         self.beerPercentTextField.resignFirstResponder()
+        self.navigationItem.title = "Wine (\(self.numberOfBeers.value) glasses)"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {

@@ -13,6 +13,7 @@
 		34AB05561C8CE2CD0017076F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AB05551C8CE2CD0017076F /* Assets.xcassets */; };
 		34AB05591C8CE2CD0017076F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AB05571C8CE2CD0017076F /* LaunchScreen.storyboard */; };
 		34DCBC231C962E2A00E3201B /* WhiskeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DCBC221C962E2A00E3201B /* WhiskeyViewController.swift */; };
+		34DCBC251C96320A00E3201B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DCBC241C96320A00E3201B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		34AB05581C8CE2CD0017076F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34AB055A1C8CE2CD0017076F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34DCBC221C962E2A00E3201B /* WhiskeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiskeyViewController.swift; sourceTree = "<group>"; };
+		34DCBC241C96320A00E3201B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				34AB05571C8CE2CD0017076F /* LaunchScreen.storyboard */,
 				34AB055A1C8CE2CD0017076F /* Info.plist */,
 				34DCBC221C962E2A00E3201B /* WhiskeyViewController.swift */,
+				34DCBC241C96320A00E3201B /* MainViewController.swift */,
 			);
 			path = Alocator;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				34DCBC231C962E2A00E3201B /* WhiskeyViewController.swift in Sources */,
 				34AB05511C8CE2CD0017076F /* ViewController.swift in Sources */,
 				34AB054F1C8CE2CD0017076F /* AppDelegate.swift in Sources */,
+				34DCBC251C96320A00E3201B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

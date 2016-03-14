@@ -10,6 +10,11 @@ import UIKit
 
 class WhiskeyViewController: ViewController {
     
+    override func sliderValueDidChange(sender: UISlider) {
+        self.beerPercentTextField.resignFirstResponder()
+        self.navigationItem.title = "Whiskey (\(self.numberOfBeers.value) shots)"
+    }
+    
     override func buttonPressed(sender: UIButton) {
         self.beerPercentTextField .resignFirstResponder()
         
