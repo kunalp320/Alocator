@@ -10,6 +10,11 @@ import UIKit
 
 class WhiskeyViewController: ViewController {
     
+    override func sliderValueDidChange(sender: UISlider) {
+        self.beerPercentTextField.resignFirstResponder()
+
+    }
+    
     override func buttonPressed(sender: UIButton) {
         self.beerPercentTextField .resignFirstResponder()
         
@@ -25,6 +30,9 @@ class WhiskeyViewController: ViewController {
         
         let ouncesOfAlcoholPerWhiskeyGlass : Float = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey
         let numberOfWhiskeyGlassesForEquivalentAlcoholAmount : Float = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass
+        
+        let numberOfWhiskeyGlasses : Int = Int(numberOfWhiskeyGlassesForEquivalentAlcoholAmount)
+        self.tabBarItem.badgeValue = "\(numberOfWhiskeyGlasses)"
         
         var beerText : String
         

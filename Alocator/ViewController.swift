@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     
     @IBAction func sliderValueDidChange(sender: UISlider) {
         self.beerPercentTextField.resignFirstResponder()
+        self.tabBarItem.badgeValue = "\(self.numberOfBeers.value)"
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
@@ -56,6 +57,8 @@ class ViewController: UIViewController {
         let ouncesOfAlcoholPerWineGlass : Float = ouncesOfWineInOneGlass * alcoholPercentOfWine
         let numberOfWineGlassesForEquivalentAlcoholAmount : Float = ouncesOfTotalAlcohol / ouncesOfAlcoholPerWineGlass
         
+        let numberOfWineGlasses : Int = Int(numberOfWineGlassesForEquivalentAlcoholAmount);
+        self.tabBarItem.badgeValue = "\(numberOfWineGlasses)"
         
         var beerString : String = ""
         if numberOfBeers == 1 {
