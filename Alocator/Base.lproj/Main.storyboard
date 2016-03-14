@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
                                 <state key="normal" title="Whiskey"/>
                                 <connections>
-                                    <segue destination="KhU-fv-8Ka" kind="show" id="EGP-Vq-eTR"/>
+                                    <segue destination="KhU-fv-8Ka" kind="show" id="LIH-in-fxR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="-54" y="201"/>
         </scene>
-        <!--View Controller-->
+        <!--Wine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alocator" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +171,7 @@
                             <outletCollection property="gestureRecognizers" destination="UGq-zV-2z8" appends="YES" id="JvQ-qe-GBW"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="BCd-az-zu3"/>
+                    <navigationItem key="navigationItem" title="Wine" id="BCd-az-zu3"/>
                     <connections>
                         <outlet property="beerPercentTextField" destination="uDT-DE-SL8" id="Uyx-HN-u7o"/>
                         <outlet property="numberOfBeers" destination="RmL-ty-w2l" id="xQz-pS-hZI"/>
@@ -187,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="693" y="201"/>
         </scene>
-        <!--Whiskey View Controller-->
+        <!--Whiskey-->
         <scene sceneID="bKb-EQ-PEm">
             <objects>
                 <viewController id="KhU-fv-8Ka" customClass="WhiskeyViewController" customModule="Alocator" customModuleProvider="target" sceneMemberID="viewController">
@@ -290,6 +290,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Whiskey" id="Vxx-O1-lpX"/>
                     <connections>
                         <outlet property="beerPercentTextField" destination="X9g-pt-H4Q" id="83N-bx-YHL"/>
                         <outlet property="numberOfBeers" destination="HHk-hU-GT6" id="u4H-Eg-2df"/>
@@ -298,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NW-72-hEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="1011"/>
+            <point key="canvasLocation" x="693" y="951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ftr-w3-0WL">
